@@ -1,0 +1,305 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* NAVBAR */
+
+.navbar {
+  display: flex;
+  align-content: center;
+  background-color: #cdfafe;
+  height: 80px;
+  color: white;
+}
+
+.navbar-brand {
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-left: 20px;
+  font-family: "Fjalla One", sans-serif;
+}
+.banner {
+  display: flex;
+  width: 100%;
+  height: 680px;
+}
+
+.left {
+  display: flex;
+  background-color: #38bdf8;
+  background-color: rgb(125 211 252);
+  background-color: rgb(56 189 248);
+  justify-content: center;
+  width: 40%;
+}
+
+.left-inner-ttle {
+  max-width: 320px;
+  font-size: 28px;
+  padding: 40px 20px;
+  font-weight: 600;
+  border: 2px solid black;
+}
+
+.left-inner {
+  margin: auto 2rem;
+}
+
+.right {
+  width: 60%;
+}
+
+.right img {
+  width: 100%;
+  height: 680px;
+  object-fit: cover;
+}
+
+.carouselExampleIndicators {
+  height: 500px;
+  width: 100%;
+}
+/* WAVE + CITY SEARCH */
+
+.city-search {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 210px;
+  background: url(./img/wave-2.svg);
+  background-size: cover;
+}
+
+.input-group {
+  position: absolute;
+  top: 90px;
+}
+
+/* SECTION CURRENCY-WEATHER */
+
+.currency-weather {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 450px;
+  padding: 150px;
+  /* background-color: #fefce8; */
+  background-color: rgb(204 251 241);
+  background-color: rgb(56 189 248);
+  background-color: rgb(56 189 248);
+}
+
+/* BLOC CURRENCY */
+
+#currencyBlock {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  border-radius: 15px;
+  width: 380px;
+  height: 380px;
+  background-color: #cdfafe;
+}
+
+#currency {
+  display: flex;
+  justify-content: center;
+}
+
+#currencyBlock > * {
+  margin: 20px;
+}
+
+.input-group-text {
+  min-width: 100px;
+}
+
+.input-group-prepend > * {
+  margin-bottom: 20px;
+}
+
+#result {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+/* BLOC WEATHER */
+
+.weatherBlock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  background-image: url(./img/chuttersnap-9AqIdzEc9pY-unsplash.jpg);
+  background-size: cover;
+  height: 380px;
+  width: 380px;
+}
+
+.card-body > * {
+  margin: 8px;
+}
+
+.card-weather {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background-color: #0093e9;
+  /* background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+    background-size: cover; */
+  background-color: rgb(2 132 199);
+  background-color: rgb(3 105 161);
+  height: 380px;
+  width: 380px;
+  border-radius: 15px;
+}
+
+/* TOURISTIC INFORMATIONS */
+
+.touristinfo {
+  width: 100%;
+  padding: 20px 100px;
+  text-align: center;
+  background-color: rgb(236 254 255);
+}
+
+.touristinfo-ttle {
+  /* background-color: red; */
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+.museumsContainer,
+.foodContainer,
+.architectureContainer,
+.beachContainer,
+.vpContainer,
+.hostelsContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#searchMuseums,
+#searchArchitecture,
+#searchVP {
+  height: 50px;
+  margin-bottom: 40px;
+}
+
+[class$="Container"] > * {
+  margin: 10px;
+}
+
+.museums,
+.food,
+.architecture,
+.beach,
+.hostels,
+.vp {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.card {
+  text-align: center;
+  font-size: 14px;
+  width: 280px;
+  min-height: 400px;
+  border-radius: 5px;
+  background-color: transparent;
+  font-family: "Poppins", sans-serif;
+  color: rgb(30 64 175);
+  border: 1px solid rgb(30 64 175);
+}
+
+.card > * {
+  margin: 10px;
+}
+
+.card .btn {
+  font-size: 14px;
+  margin: 30px;
+  color: rgb(30 64 175);
+  border: 1px solid rgb(30 64 175);
+}
+
+.card .btn:hover {
+  color: white;
+  background-color: rgb(30 64 175);
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-img-top {
+  height: 180px;
+  width: 240px;
+  margin: 20px;
+  border-radius: 0px;
+}
+
+.card-button {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 20px;
+  margin: 40px;
+  height: 40px;
+  width: 200px;
+  background-color: black;
+  color: white;
+}
+
+.food-img {
+  width: 120px;
+}
+
+/* MAP */
+
+.mapSearch {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  padding: 40px 80px;
+  /* background-color: #fefce8; */
+  background-color: rgb(204 251 241);
+  background-color: rgb(56 189 248);
+  background-color: rgb(254 243 199);
+  background-color: rgb(56 189 248);
+}
+
+.mapSearch .map-ttle {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+#map {
+  height: 480px;
+  margin: 20px;
+}
+
+.map-buttons {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 100px;
+}
+
+#searchHostels,
+#searchBeach,
+#searchFood,
+#searchBars {
+  width: 200px;
+}

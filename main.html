@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventure Guides</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+     integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+     crossorigin=""></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>                
+
+  <!-- NAVBAR -->
+
+<nav class="navbar navbar-light">
+  <a class="navbar-brand" href="#">
+    Adventure Guides
+  </a>
+</nav>
+
+  <!-- CAROUSEL --->
+
+  <section class="banner">
+
+    <div class="left">
+        <div class="left-inner">
+            <p class="left-inner-ttle">Discover your next adventure with us.<br> Your go-to source for travel information.</b></u></p>
+        </div>
+    </div>
+    <div class="right">
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="./img/redd-f-wOj5odhDOZ0-unsplash (1).jpg" alt="First slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="./img/guus-baggermans-oWsy_TQAScI-unsplash.jpg" alt="Second slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="img/rebe-adelaida-zunQwMy5B6M-unsplash.jpg" alt="Third slide">
+          </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="img/claudio-schwarz-pN684G33h_M-unsplash.jpg" alt="Four slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="img/niklas-weiss--2WlTWZLnRc-unsplash.jpg" alt="Five slide">
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+
+     </div>
+
+     </section> 
+
+
+ <!-- WAVE + CITY SEARCH -->
+
+<div class="wave">
+  <div class="city-search">
+    <div class="input-group col-8 mb-2">
+      <input type="text" id="city" class="form-control" placeholder="Your next destination" aria-label="Recipient's username" aria-describedby="basic-addon2">
+      <div class="input-group-append">
+        <button class="btn btn-outline-primary" id="submit" type="button">Submit</button>
+      </div>
+    </div>
+    </div>
+</div>
+
+<!-- SECTION CURRENCY-WEATHER-->
+
+  <section class="currency-weather">
+
+    <!-- BLOC CURRENCY -->
+
+<div class="currency">
+    <div id="currencyBlock">
+        
+        <div class="d-flex flex-column mb-4 col-7" id="currency">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Amount</span>
+            <input id="amount" type="text" class="form-control" placeholder="1" aria-label="Username" aria-describedby="basic-addon1">
+          </div>
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">From</span>
+            <input id="from" type="text" class="form-control" placeholder="USD" aria-label="Username" aria-describedby="basic-addon1">
+          </div>
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">To</span>
+            <input id="to" type="text" class="form-control" placeholder="EUR" aria-label="Username" aria-describedby="basic-addon1">
+          </div>
+          <button id="send" type="button" class="btn btn-outline-info">Convert</button>
+          <p id="result"></p>
+        </div>
+      </div>
+    </div>
+
+        <!-- BLOC WEATHER -->
+        
+        <div class="weatherBlock">
+            <div id="date"></div>
+            <div id="humidity"></div>
+            <div id="wind"></div>
+            <div id="uv"></div>
+            <div id="temperature"></div>
+            <img id="icon">
+    </div>
+    
+  </section>
+  
+  <!-- TOURISTIC INFORMATIONS -->
+
+  <section class="touristinfo">
+    <div class="touristinfo-ttle"><h2>take a look at the activities</h2></div>
+  <section class="museums">
+      <button type="button" id="searchMuseums" class="btn btn-outline-primary btn-sm">museums</button>
+  <div class="museumsContainer">
+  </div>
+</section>
+
+  <section class="architecture">
+    <button type="button" id="searchArchitecture" class="btn btn-outline-primary btn-sm">architecture</button>
+  <div class="architectureContainer">
+  </div>
+</section>
+
+
+  <section class="vp">
+    <button type="button" id="searchVP" class="btn btn-outline-primary btn-sm">VP</button>
+  <div class="vpContainer">
+  </div>
+</section>
+
+</section>
+
+ <!-- MAP -->
+
+<section class="mapSearch">
+  <div class="map-ttle"><h2>looking for commodities ?</h2></div>
+  <div class="map-buttons">
+    <button type="button" id="searchHostels" class="btn btn-danger btn-sm">hostels</button>
+    <button type="button" id="searchBeach" class="btn btn-primary btn-sm">beach</button>
+    <button type="button" id="searchFood" class="btn btn-success btn-sm">food</button>
+    <button type="button" id="searchBars" class="btn btn-warning btn-sm">bars</button>
+  </div>
+    <div id="map"></div>
+  </section>
+
+
+</section>
+
+<script src="./script.js"></script>
+<script type='text/javascript' src='config.js'></script>
+</body>
+
+</html>
