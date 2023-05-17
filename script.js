@@ -25,7 +25,7 @@ async function getRates() {
   let toCurrency = to.value;
   let amountCurrency = amount.value;
 
-  const key = config.SECRET_API_KEY_CONVERTER;
+  const key = "8e6de312f853558d57237b5ffe9f9618";
   const requestString = `https://api.currencybeacon.com/v1/convert?from=${fromCurrency}&to=${toCurrency}&amount=${amountCurrency}&api_key=${key}`;
   const dataRates = await fetch(requestString);
   console.log(dataRates);
@@ -89,7 +89,7 @@ bars.addEventListener("click", getBars);
 async function getWeather() {
   let cityWeather = city.value;
 
-  const weatherKey = config.SECRET_API_KEY_WEATHER;
+  const weatherKey = "f5cf8d804b794358b43131840232203";
   const requestString = `https://api.weatherapi.com/v1/current.json?key=${weatherKey}&q=${cityWeather}&aqi=no`;
   const dataWeather = await fetch(requestString);
   console.log(dataWeather);
@@ -175,7 +175,8 @@ async function getMuseums() {
   console.log(latitude);
   console.log(longitude);
 
-  const opentripKey = config.SECRET_API_KEY_OPENTRIP;
+  const opentripKey =
+    "5ae2e3f221c38a28845f05b6c8cb92f0bc450453b786ce4566a0e18f";
   const requestMuseums = `https://api.opentripmap.com/0.1/en/places/radius?radius=10000&lon=${longitude}&lat=${latitude}&kinds=museums&rate=3&limit=8&apikey=${opentripKey}`;
   const dataMuseums = await fetch(requestMuseums);
   console.log(dataMuseums);
@@ -187,7 +188,8 @@ async function getMuseums() {
 
   for (let i = 0; i < responseMuseums.features.length; i++) {
     const xid = responseMuseums.features[i].properties.xid;
-    const opentripKey = config.SECRET_API_KEY_OPENTRIP;
+    const opentripKey =
+      "5ae2e3f221c38a28845f05b6c8cb92f0bc450453b786ce4566a0e18f";
     const requestXid = `https://api.opentripmap.com/0.1/en/places/xid/${xid}?apikey=${opentripKey}`;
     const dataXid = await fetch(requestXid);
     console.log(dataXid);
@@ -229,7 +231,8 @@ getMuseums();
 
 async function getFood() {
   const placesSearch = city.value;
-  const opentripKey = config.SECRET_API_KEY_OPENTRIP;
+  const opentripKey =
+    "5ae2e3f221c38a28845f05b6c8cb92f0bc450453b786ce4566a0e18f";
   const requestString = `https://geocode.maps.co/search?q=${placesSearch}`;
   const dataPlaces = await fetch(requestString);
   console.log(dataPlaces);
@@ -251,7 +254,8 @@ async function getFood() {
 
   for (let i = 0; i < responseFood.features.length; i++) {
     const xid = responseFood.features[i].properties.xid;
-    const opentripKey = config.SECRET_API_KEY_OPENTRIP;
+    const opentripKey =
+      "5ae2e3f221c38a28845f05b6c8cb92f0bc450453b786ce4566a0e18f";
     const requestXid = `https://api.opentripmap.com/0.1/en/places/xid/${xid}?apikey=${opentripKey}`;
     const dataXid = await fetch(requestXid);
     console.log(dataXid);
@@ -305,7 +309,8 @@ async function getArchitecture() {
   console.log(latitude);
   console.log(longitude);
 
-  const opentripKey = config.SECRET_API_KEY_OPENTRIP;
+  const opentripKey =
+    "5ae2e3f221c38a28845f05b6c8cb92f0bc450453b786ce4566a0e18f";
   const requestArchitecture = `https://api.opentripmap.com/0.1/en/places/radius?radius=10000&lon=${longitude}&lat=${latitude}&kinds=architecture&rate=3&limit=8&apikey=${opentripKey}`;
   const dataArchitecture = await fetch(requestArchitecture);
   console.log(dataArchitecture);
@@ -317,7 +322,8 @@ async function getArchitecture() {
 
   for (let i = 0; i < responseArchitecture.features.length; i++) {
     const xid = responseArchitecture.features[i].properties.xid;
-    const opentripKey = config.SECRET_API_KEY_OPENTRIP;
+    const opentripKey =
+      "5ae2e3f221c38a28845f05b6c8cb92f0bc450453b786ce4566a0e18f";
 
     const requestXid = `https://api.opentripmap.com/0.1/en/places/xid/${xid}?apikey=${opentripKey}`;
     const dataXid = await fetch(requestXid);
@@ -370,7 +376,8 @@ async function getBeach() {
   console.log(latitude);
   console.log(longitude);
 
-  const opentripKey = config.SECRET_API_KEY_OPENTRIP;
+  const opentripKey =
+    "5ae2e3f221c38a28845f05b6c8cb92f0bc450453b786ce4566a0e18f";
   const requestBeach = `https://api.opentripmap.com/0.1/en/places/radius?radius=10000&lon=${longitude}&lat=${latitude}&kinds=beaches&limit=9&apikey=${opentripKey}`;
   const dataBeach = await fetch(requestBeach);
   console.log(dataBeach);
@@ -379,7 +386,8 @@ async function getBeach() {
 
   for (let i = 0; i < responseBeach.features.length; i++) {
     const xid = responseBeach.features[i].properties.xid;
-    const opentripKey = config.SECRET_API_KEY_OPENTRIP;
+    const opentripKey =
+      "5ae2e3f221c38a28845f05b6c8cb92f0bc450453b786ce4566a0e18f";
 
     const requestXid = `https://api.opentripmap.com/0.1/en/places/xid/${xid}?apikey=${opentripKey}`;
     const dataXid = await fetch(requestXid);
@@ -421,7 +429,8 @@ async function getVP() {
   const longitude = responsePlaces[0].lon;
   console.log(latitude);
   console.log(longitude);
-  const opentripKey = config.SECRET_API_KEY_OPENTRIP;
+  const opentripKey =
+    "5ae2e3f221c38a28845f05b6c8cb92f0bc450453b786ce4566a0e18f";
   const requestVP = `https://api.opentripmap.com/0.1/en/places/radius?radius=100000&lon=${longitude}&lat=${latitude}&kinds=view_points&rate=1&limit=8&apikey=${opentripKey}`;
   const dataVP = await fetch(requestVP);
   console.log(dataVP);
@@ -433,7 +442,8 @@ async function getVP() {
 
   for (let i = 0; i < responseVP.features.length; i++) {
     const xid = responseVP.features[i].properties.xid;
-    const opentripKey = config.SECRET_API_KEY_OPENTRIP;
+    const opentripKey =
+      "5ae2e3f221c38a28845f05b6c8cb92f0bc450453b786ce4566a0e18f";
     const requestXid = `https://api.opentripmap.com/0.1/en/places/xid/${xid}?apikey=${opentripKey}`;
     const dataXid = await fetch(requestXid);
     console.log(dataXid);
@@ -485,7 +495,8 @@ async function getHostels() {
   console.log(latitude);
   console.log(longitude);
 
-  const opentripKey = config.SECRET_API_KEY_OPENTRIP;
+  const opentripKey =
+    "5ae2e3f221c38a28845f05b6c8cb92f0bc450453b786ce4566a0e18f";
   const requestHostels = `https://api.opentripmap.com/0.1/en/places/radius?radius=10000&lon=${longitude}&lat=${latitude}&kinds=hostels&rate=2&limit=9&apikey=${opentripKey}`;
   const dataHostels = await fetch(requestHostels);
   console.log(dataHostels);
@@ -494,7 +505,8 @@ async function getHostels() {
 
   for (let i = 0; i < responseHostels.features.length; i++) {
     const xid = responseHostels.features[i].properties.xid;
-    const opentripKey = config.SECRET_API_KEY_OPENTRIP;
+    const opentripKey =
+      "5ae2e3f221c38a28845f05b6c8cb92f0bc450453b786ce4566a0e18f";
 
     const requestXid = `https://api.opentripmap.com/0.1/en/places/xid/${xid}?apikey=${opentripKey}`;
     const dataXid = await fetch(requestXid);
@@ -534,7 +546,8 @@ async function getBars() {
   const longitude = responsePlaces[0].lon;
   console.log(latitude);
   console.log(longitude);
-  const opentripKey = config.SECRET_API_KEY_OPENTRIP;
+  const opentripKey =
+    "5ae2e3f221c38a28845f05b6c8cb92f0bc450453b786ce4566a0e18f";
 
   const requestBars = `https://api.opentripmap.com/0.1/en/places/radius?radius=10000&lon=${longitude}&lat=${latitude}&kinds=bars&limit=8&apikey=${opentripKey}`;
   const dataBars = await fetch(requestBars);
@@ -544,7 +557,8 @@ async function getBars() {
 
   for (let i = 0; i < responseBars.features.length; i++) {
     const xid = responseBars.features[i].properties.xid;
-    const opentripKey = config.SECRET_API_KEY_OPENTRIP;
+    const opentripKey =
+      "5ae2e3f221c38a28845f05b6c8cb92f0bc450453b786ce4566a0e18f";
 
     const requestXid = `https://api.opentripmap.com/0.1/en/places/xid/${xid}?apikey=${opentripKey}`;
     const dataXid = await fetch(requestXid);
