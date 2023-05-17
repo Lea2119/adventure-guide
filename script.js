@@ -95,6 +95,7 @@ async function getWeather() {
   console.log(dataWeather);
   let responseWeather = await dataWeather.json();
   console.log(responseWeather);
+
   useWeatherData(responseWeather);
 
   date.textContent = `Date:${responseWeather.location.localtime}`;
