@@ -348,7 +348,7 @@ body {
   }
 }
 
-@media screen and (max-width: 374px) {
+@media screen and (max-width: 350px) {
   .currency-weather {
     display: flex;
     flex-direction: column;
