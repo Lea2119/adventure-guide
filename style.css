@@ -313,6 +313,12 @@ body {
     align-items: center;
   }
 
+  .weatherBlock,
+  #currencyBlock {
+    min-height: 350px;
+    min-width: 350px;
+  }
+
   .mapSearch {
     padding: 2px;
   }
@@ -342,7 +348,7 @@ body {
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 374px) {
   .currency-weather {
     display: flex;
     flex-direction: column;
