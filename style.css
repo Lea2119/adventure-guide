@@ -18,7 +18,7 @@ body {
 .navbar-brand {
   text-transform: uppercase;
   font-weight: 600;
-  margin-left: 60px;
+  margin-left: 20px;
   font-family: "Fjalla One", sans-serif;
 }
 .banner {
@@ -334,5 +334,25 @@ body {
   .left-inner-ttle {
     color: white;
     border: 2px solid white;
+  }
+
+  .touristinfo-ttle,
+  .map-ttle {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .currency-weather {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .weatherBlock,
+  #currencyBlock {
+    min-height: 300px;
+    min-width: 300px;
   }
 }
