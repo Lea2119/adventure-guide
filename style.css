@@ -18,7 +18,7 @@ body {
 .navbar-brand {
   text-transform: uppercase;
   font-weight: 600;
-  margin-left: 20px;
+  margin-left: 60px;
   font-family: "Fjalla One", sans-serif;
 }
 .banner {
@@ -85,12 +85,14 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 450px;
-  padding: 150px;
-  /* background-color: #fefce8; */
-  background-color: rgb(204 251 241);
+  min-height: 450px;
+  width: 100%;
+  padding: 10px;
   background-color: rgb(56 189 248);
-  background-color: rgb(56 189 248);
+}
+
+.currency-weather > * {
+  margin: 10px;
 }
 
 /* BLOC CURRENCY */
@@ -99,9 +101,10 @@ body {
   display: flex;
   justify-content: center;
   align-content: center;
+  flex-wrap: wrap;
   border-radius: 15px;
-  width: 380px;
-  height: 380px;
+  min-width: 350px;
+  min-height: 350px;
   background-color: #cdfafe;
 }
 
@@ -135,10 +138,11 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 15px;
+  margin: 0;
   background-image: url(./img/chuttersnap-9AqIdzEc9pY-unsplash.jpg);
   background-size: cover;
-  height: 380px;
-  width: 380px;
+  min-height: 350px;
+  min-width: 350px;
 }
 
 .card-body > * {
@@ -150,12 +154,10 @@ body {
   justify-content: center;
   align-content: center;
   background-color: #0093e9;
-  /* background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
-    background-size: cover; */
   background-color: rgb(2 132 199);
   background-color: rgb(3 105 161);
-  height: 380px;
-  width: 380px;
+  min-height: 350px;
+  min-width: 350px;
   border-radius: 15px;
 }
 
@@ -211,17 +213,13 @@ body {
 .card {
   text-align: center;
   font-size: 14px;
-  width: 280px;
+  min-width: 300px;
   min-height: 400px;
   border-radius: 5px;
   background-color: transparent;
   font-family: "Poppins", sans-serif;
   color: rgb(30 64 175);
   border: 1px solid rgb(30 64 175);
-}
-
-.card > * {
-  margin: 10px;
 }
 
 .card .btn {
@@ -244,10 +242,13 @@ body {
 }
 
 .card-img-top {
-  height: 180px;
-  width: 240px;
-  margin: 20px;
-  border-radius: 0px;
+  height: auto;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.card-img-top img {
+  width: fit-content;
 }
 
 .card-button {
@@ -302,4 +303,36 @@ body {
 #searchFood,
 #searchBars {
   width: 200px;
+}
+
+@media screen and (max-width: 768px) {
+  .currency-weather {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .mapSearch {
+    padding: 2px;
+  }
+  .map-buttons button {
+    margin-right: 10px;
+  }
+
+  .right {
+    display: none;
+  }
+
+  .left {
+    width: 100%;
+    background-image: url("./img/PowerfulReasons_hero.jpg");
+    object-fit: contain;
+    object-position: center;
+  }
+
+  .left-inner-ttle {
+    color: white;
+    border: 2px solid white;
+  }
 }
